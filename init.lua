@@ -242,6 +242,9 @@ local config = {
             require("rktjmp/lush.nvim")
         end,
       },
+      -- Syntax highlighting
+      -- { "jvirtanen/vim-hocon" },
+      { "NoahTheDuke/vim-just" },
       -- { "andweeb/presence.nvim" },
       -- {
       --   "ray-x/lsp_signature.nvim",
@@ -333,6 +336,11 @@ local config = {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     -- Set up custom filetypes
+      vim.filetype.add {
+        extension = {
+          conf = "hocon"
+        }
+      }
     -- vim.filetype.add {
     --   extension = {
     --     foo = "fooscript",
