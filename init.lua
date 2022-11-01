@@ -213,6 +213,8 @@ local config = {
       ["<leader><tab>"] = { ":b#<cr>", desc = "Previous Buffer" },
       -- windows
       ["<tab>"] = { "<c-w>w", desc = "Next window" },
+      -- Telescpope bindings
+      ["<leader>fk"] = { ":Telescope keymaps<cr>", desc = "Show key bindings" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
