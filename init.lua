@@ -206,6 +206,8 @@ local config = {
       ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
       ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
+      ["f]"] = { "<cmd>Hi><cr>", desc = "Find next selected word" },
+      ["f["] = { "<cmd>Hi<<cr>", desc = "Find previous selected word" },
       -- fugitive configuration 
       ["<leader>gs"] = { ":G<cr>", desc = "Fugitive git status" },
       ["<leader>gb"] = { ":Git blame<cr>", desc = "Fugitive git blame" },
