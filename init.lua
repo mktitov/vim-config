@@ -50,9 +50,10 @@ local config = {
       wrap = false, -- sets vim.opt.wrap,
       background = "light",
       mouse = "",
-      spelllang = "en_us"
+      spelllang = "en_us",
     },
     g = {
+      noswapfile = "",
       mapleader = " ", -- sets vim.g.mapleader
       autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
       cmp_enabled = true, -- enable completion at start
@@ -341,6 +342,10 @@ local config = {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    vim.opt.tabstop = 2
+    vim.opt.shiftwidth = 2
+    vim.opt.softtabstop = 2
+    vim.opt.swapfile = false
     -- Set up custom filetypes
       vim.filetype.add {
         extension = {
