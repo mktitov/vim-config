@@ -51,6 +51,10 @@ local config = {
       background = "light",
       mouse = "",
       spelllang = "en_us",
+      shiftwidth = 2,
+      tabstop = 2,
+      softtabstop = 2,
+      swapfile = false
     },
     g = {
       noswapfile = "",
@@ -118,9 +122,10 @@ local config = {
       highlighturl = true,
       hop = false,
       indent_blankline = true,
+      ["indent-o-matic"] = false,
       lightspeed = false,
       ["neo-tree"] = true,
-      notify = true,
+      notify = false,
       ["nvim-tree"] = false,
       ["nvim-web-devicons"] = true,
       rainbow = true,
@@ -237,6 +242,11 @@ local config = {
 
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
+      ["rcarriga/nvim-notify"] = { disable = true},
+      ["NvChad/nvim-colorizer.lua"] = {
+        always_update = true
+      },
+      ["Darazaki/indent-o-matic"] = { disable = true },
       { "tpope/vim-fugitive"},
       { "azabiong/vim-highlighter" },
       -- Color themes
@@ -344,6 +354,7 @@ local config = {
   polish = function()
     vim.opt.tabstop = 2
     vim.opt.shiftwidth = 2
+    vim.bo.shiftwidth = 2
     vim.opt.softtabstop = 2
     vim.opt.swapfile = false
     -- Set up custom filetypes
